@@ -1,2 +1,6 @@
-# cloudMusic
-网易云音乐
+# Vue 3 + TypeScript + Vite
+
+# 启动项目
+```
+npm run dev
+```
