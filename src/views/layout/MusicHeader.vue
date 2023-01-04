@@ -5,7 +5,7 @@
         <h1 class="logo"></h1>
       </router-link>
       <ul class="menu">
-        <li :class="{ active: current == item.path }" v-for="item in menuList" :key="item.path">
+        <li :class="{ 'active': current == item.path }" v-for="item in menuList" :key="item.path">
           <router-link :to="item.path">{{ item.name }}</router-link>
         </li>
       </ul>
@@ -23,6 +23,8 @@ export default defineComponent({
     const store = useStore();
     const router = useRouter();
     let current = ref<string>(router.currentRoute.value.path);
+    console.log(current.value);
+
     const menuList = ref([
       {
         path: "/discover",

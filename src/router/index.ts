@@ -1,44 +1,24 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import layout from '@/views/layout/index.vue'
-
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    redirect: '/discover',
+  },
+  {
+    path: '/discover',
     name: 'discover',
-    redirect: '/my',
-    component: layout,
-    children: [
-      {
-        path: 'discover',
-        name: 'discover',
-        component: () => import('@/views/discover/index.vue'),
-      },
-    ]
+    component: () => import('@/views/discover/index.vue'),
   },
   {
     path: '/my',
     name: 'my',
-    component: layout,
-    children: [
-      {
-        path: 'my',
-        name: 'my',
-        component: () => import('@/views/my/index.vue')
-      },
-    ]
+    component: () => import('@/views/my/index.vue')
   },
   {
     path: '/friend',
     name: 'friend',
-    component: layout,
-    children: [
-      {
-        path: 'friend',
-        name: 'friend',
-        component: () => import('@/views/friend/index.vue')
-      },
-    ]
-  }
+    component: () => import('@/views/friend/index.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHashHistory(),

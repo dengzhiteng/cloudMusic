@@ -1,5 +1,5 @@
 <template>
-  <div class="discover">discover</div>
+  <div class="discover">发现音乐</div>
 </template>
     
 <script  lang='ts'>
@@ -10,7 +10,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss" scoped>
-.discover {
-}
-</style>

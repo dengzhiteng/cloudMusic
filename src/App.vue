@@ -1,13 +1,12 @@
-
-<script setup lang="ts">
-// import TopBar from "@/components/TopBar.vue"
-</script>
-
 <template>
-   <!-- <TopBar/> -->
-   <router-view />
+  <Layout />
 </template>
-
-<style scoped>
-
-</style>
+<script  lang='ts'>
+import { defineComponent } from "vue";
+import Layout from "@/views/layout/index.vue";
+export default defineComponent({
+  components: {
+    Layout,
+  },
+});
+</script>
