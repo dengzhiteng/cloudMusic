@@ -1,15 +1,15 @@
 <template>
   <header class="topbar">
     <div class="wrap">
-      <router-link to="/discover"> 
-      <h1 class="logo"></h1>
+      <router-link to="/discover">
+        <h1 class="logo"></h1>
       </router-link>
       <ul class="menu">
-        <li :class="{ active: current == item.path }"  v-for="item in menuList" :key="item.path">
+        <li :class="{ active: current == item.path }" v-for="item in menuList" :key="item.path">
           <router-link :to="item.path">{{ item.name }}</router-link>
         </li>
       </ul>
-      <div class="loginBtn" @click="login">登录</div>
+      <div class="loginBtn">登录</div>
     </div>
   </header>
 </template>
@@ -39,6 +39,7 @@ export default defineComponent({
     ]);
     onBeforeRouteUpdate((to) => {
       current.value = to.path;
+      console.log("current", current);
     });
     function login() {
       store.commit("getLoginVisible", true);
@@ -47,6 +48,7 @@ export default defineComponent({
       login,
       current,
       menuList,
+      onBeforeRouteUpdate,
     };
   },
 });

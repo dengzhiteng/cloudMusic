@@ -1,5 +1,5 @@
 <template>
-  <div>关注</div>
+  <div class="friend">关注</div>
 </template>
     
 <script  lang='ts'>

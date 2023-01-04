@@ -4,14 +4,14 @@ import layout from '@/views/layout/index.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    redirect: 'discover',
+    name: 'discover',
+    redirect: '/my',
     component: layout,
     children: [
       {
         path: 'discover',
         name: 'discover',
-        component: () => import('@/views/home/Discover.vue'),
+        component: () => import('@/views/discover/index.vue'),
       },
     ]
   },

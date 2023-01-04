@@ -1,24 +1,21 @@
 <template>
-  <!-- <a-layout class="layout"> -->
+  <div>
     <music-header></music-header>
     <div class="content">
       <router-view />
     </div>
     <music-footer></music-footer>
-  <!-- </a-layout> -->
+  </div>
 </template>
 <script lang="ts">
 import MusicHeader from "./MusicHeader.vue";
 import MusicFooter from "./MusicFooter.vue";
-// import MusicLogin from "./MusicLogin.vue";
 import { defineComponent } from "vue";
 export default defineComponent({
   components: {
     MusicHeader,
     MusicFooter,
-    // MusicLogin,
   },
-  setup() {},
 });
 </script>
 <style lang="scss" scoped>
